@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+        content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+
+  <title>TT Chat</title>
+
+  <link rel="stylesheet" href="style.css">
+
+  <script type="module" src="app.js"></script>
+</head>
+
+<body>
+
+<div id="app">
+
+  <!-- LOGIN -->
+  <section id="authPage" class="page">
+
+    <div class="logo">TT</div>
+
+    <h1>TT Chat</h1>
+    <p class="sub">Chat với bạn bè theo thời gian thực</p>
+
+    <div class="auth-box">
+
+      <input id="email"
+             type="email"
+             placeholder="Email">
+
+      <input id="password"
+             type="password"
+             placeholder="Mật khẩu">
+
+      <input id="username"
+             placeholder="ID của bạn"
+             maxlength="30">
+
+      <button id="loginBtn">Đăng nhập</button>
+
+      <button id="registerBtn" class="secondary">
+        Tạo tài khoản
+      </button>
+
+      <p id="authStatus"></p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MAIN -->
+  <section id="mainPage" class="page hidden">
+
+    <header class="topbar">
+
+      <div>
+        <b>TT Chat</b>
+        <small id="myId"></small>
+      </div>
+
+      <button id="logoutBtn">Đăng xuất</button>
+
+    </header>
+
+
+    <!-- SEARCH -->
+
+    <div class="search">
+
+      <input id="searchInput"
+             placeholder="Nhập ID người dùng...">
+
+      <button id="searchBtn">🔎</button>
+
+    </div>
+
+    <div id="searchResults"></div>
+
+
+    <!-- CONTENT -->
+
+    <div class="layout">
+
+      <aside class="friends">
+
+        <div class="section-title">
+          Bạn bè / Following
+        </div>
+
+        <div id="friendsList"></div>
+
+      </aside>
+
+
+      <main class="chat">
+
+        <div id="chatHeader" class="chat-header">
+          <span>Chọn một người để chat</span>
+        </div>
+
+        <div id="messages" class="messages"></div>
+
+
+        <div class="bulk">
+
+          <label>Số lần gửi:</label>
+
+          <select id="sendCount">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="20">20</option>
+            <option value="50">50</option>
+          </select>
+
+        </div>
+
+
+        <div class="composer">
+
+          <input id="messageInput"
+                 placeholder="Nhập tin nhắn..."
+                 autocomplete="off">
+
+          <button id="sendBtn">➤</button>
+
+        </div>
+
+      </main>
+
+    </div>
+
+  </section>
+
+</div>
+
+</body>
+</html>
